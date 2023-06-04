@@ -35,7 +35,7 @@ param appInsightsInstrumentationKey string
 /*
  * Resources
 */
-var ApimNewName = 'apim${uniqueString(resourceGroup().id)}'
+var apimNewName = 'apim${uniqueString(resourceGroup().id)}'
 
 resource apimName_resource 'Microsoft.ApiManagement/service@2020-12-01' = {
   name: apimNewName
