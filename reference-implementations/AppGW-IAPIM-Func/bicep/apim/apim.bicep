@@ -5,7 +5,7 @@ targetScope='resourceGroup'
 */
 
 @description('The name of the API Management resource to be created.')
-param apimName            string
+param apimName            string 
 
 @description('The subnet resource id to use for APIM.')
 @minLength(1)
@@ -35,9 +35,10 @@ param appInsightsInstrumentationKey string
 /*
  * Resources
 */
+var ApimNewName = 'apim${uniqueString(resourceGroup().id)}'
 
 resource apimName_resource 'Microsoft.ApiManagement/service@2020-12-01' = {
-  name: apimName
+  name: apimNewName
   location: location
   sku:{
     capacity: capacity
