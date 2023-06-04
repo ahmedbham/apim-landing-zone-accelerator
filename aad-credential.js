@@ -22,7 +22,7 @@ assigneeObjectId=$(az ad sp create --id $appId --query id --output tsv)
 
 # Create a role assignment for the Azure AD app.
 subscriptionId=$(az account show --query id --output tsv)
-az role assignment create --role Contributor --subscription $subscriptionId --assignee-object-id  $assigneeObjectId --assignee-principal-type ServicePrincipal --scope /subscriptions/$subscriptionId/resourceGroups/$resourceGroupName
+az role assignment create --role Contributor --subscription $subscriptionId --assignee-object-id  $assigneeObjectId --assignee-principal-type ServicePrincipal --scope /subscriptions/$subscriptionId
 
 # Create a federated identity credential on the Azure AD app.
 az ad app federated-credential create --id $appId --parameters tools/deploy/module0/credential.json
