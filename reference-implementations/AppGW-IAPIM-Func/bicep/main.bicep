@@ -63,7 +63,7 @@ var apimResourceGroupName = 'rg-apim-${resourceSuffix}'
 // var appGatewayName = 'appgtwy-${uniqueString(resourceGroup().id)}'
 
 
-var apimName = 'apim-${resourceSuffix}'
+var apimName = 'apimqnqpw6r5egkgk'
 var appGatewayName = 'appgw-${resourceSuffix}'
 
 
