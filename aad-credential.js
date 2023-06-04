@@ -7,10 +7,10 @@ fi
 
 resourceGroupName=$2
 if [ -z "$resourceGroupName" ]; then
-	resourceGroupName=openai-levelup-rg
+	resourceGroupName=apim-lza-rg
 fi
 
-sed -i "s/your-github-username/$github_username/g" tools/deploy/module0/credential.json
+sed -i "s/your-github-username/$github_username/g" credential.json
 
 # Create an Azure AD application
 uniqueAppName=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c10 ; echo '')
