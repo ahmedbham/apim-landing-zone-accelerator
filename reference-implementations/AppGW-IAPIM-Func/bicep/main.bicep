@@ -59,8 +59,12 @@ var backendResourceGroupName = 'rg-backend-${resourceSuffix}'
 var apimResourceGroupName = 'rg-apim-${resourceSuffix}'
 
 // Resource Names
-var apimName = 'apim-${uniqueString(resourceGroup().id)}'
-var appGatewayName = 'appgtwy-${uniqueString(resourceGroup().id)}'
+// var apimName = 'apim-${uniqueString(resourceGroup().id)}'
+// var appGatewayName = 'appgtwy-${uniqueString(resourceGroup().id)}'
+
+
+var apimName = 'apim-${resourceSuffix}'
+var appGatewayName = 'appgw-${resourceSuffix}'
 
 
 resource networkingRG 'Microsoft.Resources/resourceGroups@2021-04-01' = {
