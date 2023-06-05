@@ -158,7 +158,7 @@ module dnsZoneModule 'shared/dnszone.bicep'  = {
   params: {
     vnetName: networking.outputs.apimCSVNetName
     vnetRG: networkingRG.name
-    apimName: apimName
+    apimName: 'apimqnqpw6r5egkgk'
     apimRG: apimRG.name
   }
 }
